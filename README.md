@@ -1,8 +1,13 @@
+https://designs-by-kate.github.io/Code-Quiz/
+
 # Coding Quiz Challenge
 
 ## Description
 
 This project is a simple coding quiz challenge that tests the user's knowledge of programming. The quiz presents a series of questions with multiple-choice answers, and the user must choose the correct option. The quiz is timed, and incorrect answers result in a time penalty.
+![image](https://github.com/designs-by-kate/Code-Quiz/assets/146155569/58d1da33-06c4-4ba1-904c-8a3e3fab0924)
+
+
 
 ## Features
 
