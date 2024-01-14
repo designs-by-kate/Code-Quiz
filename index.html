@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+    <div class="scores"><a href="highscores.html">View High Scores</a></div>
 
     <div class="timer">Time: <span id="time">0</span></div>
 
@@ -28,11 +28,15 @@
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
+        <audio id="correctSound" src="assets/sfx/correct.wav"></audio>
+        <audio id="incorrectSound" src="assets/sfx/incorrect.wav"></audio>
+        <p id="result"></p>
+        <!-- <button id="finish">Finish test</button> -->
       </div>
 
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>Your final score is <span id="final-score"></span></p>
         <p>
           Enter initials: <input type="text" id="initials" max="3" />
           <button id="submit">Submit</button>
