@@ -84,9 +84,4 @@ var questions = [
     options: ["HyperText Markup Language 5", "High-Level Text Markup Language 5", "Hypertext and links technology 5", "Home Tool Markup Language 5"],
     correctAnswer: "HyperText Markup Language 5",
     },
-    {
-    questionTitle: "What is the primary purpose of the 'npm' package manager in Node.js?",
-    options: ["To manage network protocols", "To create web servers", "To install and manage software packages", "To create new programming languages"],
-    correctAnswer: "To install and manage software packages",
-    },
 ]
