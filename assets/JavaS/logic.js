@@ -107,12 +107,6 @@ function endQuiz(){
   finalScoreElement.textContent = score;
 }
 
-//Function to restart the quiz
-function reStartQuiz(){
-  hideDiv("end-screen"); // Hide the questions div
-  showDiv("start-screen"); // Show the end screen
-}
-
 // Event listener for the "Start Quiz" button
 var startBtn = document.getElementById("start");
 startBtn.addEventListener("click", function () {
@@ -125,9 +119,9 @@ startBtn.addEventListener("click", function () {
 // Event listener for the "Submit" button
 var submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click", function () {
-  var initials = document.getElementById("initials").value;
+  var initials = document.getElementById("initials").value; //capture user input
 
-  if (initials) {
+  if (initials) { //check if var "initials" is not an empty string
     // Retrieve existing scores from local storage or initialize an empty object
     var existingScores = JSON.parse(localStorage.getItem("quizScores")) || {};
     // Check if the initials already exist in the scores
@@ -140,8 +134,10 @@ submitBtn.addEventListener("click", function () {
     }
     // Save the updated scores back to local storage
     localStorage.setItem("quizScores", JSON.stringify(existingScores));
+    window.location.href = "highscores.html";
+  } else {
+    alert("Please enter your initials before submitting.");
   }
-  reStartQuiz();
 });
 
 // Initial call to display the first question

@@ -26,10 +26,14 @@ function displayScores() {
   var clearBtn = document.getElementById("clear");
   clearBtn.addEventListener("click", function () {
     // Clear the high scores from local storage
-    localStorage.removeItem("quizScores");
+    if(localStorage.getItem("quizScores") !== null){
+      localStorage.removeItem("quizScores");
 
-    // Update the displayed high scores
-    displayScores();
+      // Update the displayed high scores
+      displayScores();
+    }else{
+      console.log("No high scores to clear.");
+    }
   });
 
   // Initial call to display high scores (you can call it at the end of your quiz)
